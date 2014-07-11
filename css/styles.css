@@ -1,0 +1,10 @@
+.etch-a-sketch {
+  border: 1px dotted black;
+  width: 300px;
+  height: 300px;
+}
+
+line {
+  stroke: gray;
+  stroke-width: 1px;
+}
