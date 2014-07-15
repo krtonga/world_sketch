@@ -23,3 +23,25 @@ fieldset, input, textarea {
   width: 80%;
   height: 100px;
 }
+
+.saved-sketch, .the-sketch {
+  width: 25%;
+  border: 3px solid black;
+  border-radius: 20px;
+  float: left;
+  margin: 5px;
+}
+
+svg {
+  width: 100%;
+}
+
+.saved-sketch {
+  width: 600px;
+  zoom: .25;
+}
+
+.the-sketch {
+  width: 350px;
+  height: 350px;
+}

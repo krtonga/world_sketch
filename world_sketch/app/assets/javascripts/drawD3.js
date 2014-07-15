@@ -6,6 +6,7 @@ var lineWidth="1";
 function blankCanvas() {
 
   var canvas = d3.select(".etch-a-sketch").append("svg")
+    .attr("id", "new-drawing")
     .on("mousedown", mousedown)
     .on("mouseup", mouseup);
 
