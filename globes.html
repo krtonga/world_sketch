@@ -64,6 +64,13 @@
      .datum(graticule)
      .attr("class", "graticule")
      .attr("d", path);
+
+  d3.json("/d/4090846/world-110m.json", function(error, world) {
+    svg.append("path")
+       .datum(topojson.feature(world, world.objects.land))
+       .attr("class", "land")
+       .attr("d", path);
+  });
 </script>
 
 <script>
@@ -135,8 +142,37 @@
   // d3.select(self.frameElement).style("height", height + "px");
 </script>
 
+// <script>
+//   // defines the svg block
+//   var svg = d3.select(".world-bank")
+//           .insert("svg", ":first-child")
+//           .attr("width", 600)
+//           .attr("height", 600)
+//   //defines projection
+//   projection = d3.geo.orthographic()
+//                      .scale(config.initialScale)
+//                      .translate([300, 300])
+//                      .rotate(config.globeDefaultRotation)
+//                      .clipAngle(90)
+//   //display lines
+//   var path = d3.geo.path()
+//                .projection(projection)
+//   svg.append("path")
+//      .datum({type: "Sphere"})
+//      .attr("class", "sphere")
+//      .attr("d", path)
+
+//   var graticule = d3.geo.graticule()
+
+//   groupPaths.append("path")
+//             .datum(graticule)
+//             .attr("class", "graticule")
+//             .attr("d", path)
+// </script>
+
   <!-- <div class="etch-a-sketch"></div> -->
   <div class="globe-container"></div>
+  <div class="world-bank"></div>
 
 </body>
 </html>
