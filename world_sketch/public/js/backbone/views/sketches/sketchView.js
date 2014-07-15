@@ -2,11 +2,11 @@ var Sketcher = Sketcher || {Models: {}, Collections: {}, Views: {} };
 
 Sketcher.Views.SketchView = Backbone.View.extend({
   initialize: function(){
-    this.listenTo(this.model, 'destroy', this.remove)
+    // this.listenTo(this.model, 'destroy', this.remove)
     this.listenTo(this.model, 'all', this.render)
   },
   template: _.template( $('.sketch-template').html() ),
-  editTemplate: _.template( $('.edit-monkey-template').html() ),
+  // editTemplate: _.template( $('.edit-monkey-template').html() ),
   render: function(){
     this.$el.html( this.template( this.model.attributes ));
     return this;
@@ -33,7 +33,7 @@ Sketcher.Views.SketchView = Backbone.View.extend({
   //     that.model.set('location', updatedLocation);
   //     var tagsField = that.$el.find('.tags')
   //     var updatedTags = tagsField.val();
-  //     that.model.set('tags', updatedTags);
+  //     that.model.set('group', updatedTags);
   //     var storyField = that.$el.find('.story')
   //     var updatedStory = storyField.val();
   //     that.model.set('story', updatedStory);

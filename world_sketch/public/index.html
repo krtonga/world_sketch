@@ -10,6 +10,21 @@
   <script src="js/libraries/underscore-min.js"></script>
   <script src="js/libraries/backbone-min.js"></script>
 
+
+  <!-- TEMPLATES :sketch, :sketchEdit -->
+  <script type="template" class="sketch-template">
+    <div class="saved-sketch">
+    <h1>ONE</h1>
+      // <div class="the-sketch"><%- data %></div>
+      // <p><strong>Artist:</strong> <%- artist %></p>
+      // <p><strong>Location:</strong> <%- location %></p>
+      // <p><strong>Created At:</strong> <%- created_at %> / Updated At: <%- updated_at %></p>
+      // <p><strong>Story:</strong> <%- story %></p>
+      // <p><strong>Tags:</strong><%- group %></p>
+    </div>
+  </script>
+
+
   <!-- APP + BACKBONE.models/collections/views -->
   <script src="js/drawD3.js"></script>
   <script src="js/backbone/app.js"></script>
@@ -51,12 +66,11 @@
         <textarea class="story"></textarea>
         <button class="save">SAVE</button>
       </fieldset>
-
-
-
-
     </form>
   </div>
+
+  <h1>hi</h1>
+  <div class="saved-sketches"></div>
 
 </body>
 </html>
