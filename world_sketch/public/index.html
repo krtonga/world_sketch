@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <title>World-Sketch</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="js/libraries/underscore-min.js"></script>
+  <script src="js/libraries/backbone-min.js"></script>
+
+  <!-- APP + BACKBONE.models/collections/views -->
+  <script src="js/drawD3.js"></script>
+  <script src="js/backbone/app.js"></script>
+  <script src="js/backbone/models/sketch.js"></script>
+  <script src="js/backbone/collections/sketchCollection.js"></script>
+  <script src="js/backbone/views/sketches/sketchView.js"></script>
+  <script src="js/backbone/views/sketches/sketchListView.js"></script>
+
+</head>
+<!-- **************BODY******************** -->
+<body onload="blankCanvas()">
+
+  <h1>Sketcher</h1>
+  <p>
+    Draw something freehand.<br>
+    Or, use a turtorial. <br>
+    Then save it. <br>
+    With it's story, and location. <br>
+    Find your past sketches, or find the sketches of a friend. <br>
+    Sketch when you travel, and send back home something unique, instantaneously. <br>
+  </p>
+
+  <div class="studio">
+    <div class="palette"></div>
+    <div class="etch-a-sketch"></div>
+  </div>
+  <div class="more-info">
+
+    <form name="sketch-details">
+      <fieldset>
+        <legend>Tell a future self about this sketch:</legend>
+        <p>Who are you? <input type="text" class="name"> / </p>
+        <p>Where are you? <input type="text" class="location"> /</p>
+        <p></p>
+          Tags:
+          <input type="text" autocomplete:"on" spellcheck="true" class="tags"> /<br>
+        </p>
+        <label for="story">Story:</label><br>
+        <textarea class="story"></textarea>
+        <button class="save">SAVE</button>
+      </fieldset>
+
+
+
+
+    </form>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+.palette {
+  border: 1px solid lightgrey;
+  height: 125px;
+  width: 90%;
+}
+
+.etch-a-sketch {
+  border: 1px dotted black;
+  height: 300px;
+  width: 90%;
+  border-radius: 5px;
+}
+
+fieldset {
+  width: 86%;
+}
+
+fieldset, input, textarea {
+  border-radius: 5px;
+}
+
+.story {
+  width: 80%;
+  height: 100px;
+}
