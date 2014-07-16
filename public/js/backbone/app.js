@@ -48,4 +48,7 @@ Sketcher.initialize = function(){
 $(function(){
   console.log('inch by inch... row by row...')
   Sketcher.initialize();
+  littleMap();
+  stateMap();
+  fancyMap();
 })

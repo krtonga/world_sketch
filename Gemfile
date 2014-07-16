@@ -44,4 +44,6 @@ group :development, :test do
   gem 'pry-nav'
 end
 
+gem 'rails_12factor'
+
 gem 'd3-rails', '~>3.4.4'

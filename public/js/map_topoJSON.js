@@ -1,6 +1,6 @@
 console.log("It (map_topoJSON) exists!")
 
-
+var fancyMap = function(){
   var m_width = $("#map").width(),
       width = 938,
       height = 500,
@@ -123,3 +123,118 @@ console.log("It (map_topoJSON) exists!")
   //   svgMap.attr("width", w);
   //   svgMap.attr("height", w * height / width);
   // });
+
+}
+
+var littleMap = function(){
+  var width = 500,
+    height = 500;
+
+  // creates projection, determines type(orth=sphere), translate (pixel coord of center), scale(distance btween proj points, defaults to 150), clipAngle(hides behind), precision(how much can be lost)
+  var projection = d3.geo.orthographic()
+                     .scale(250)
+                     .translate([ width/2, height/2 ])
+                     .clipAngle(90)
+                     .precision(.1);
+
+  var path = d3.geo.path()
+               .projection(projection);
+
+  var graticule = d3.geo.graticule();
+
+  var rotate1 = d3.scale.linear()
+                  .domain([0, width])
+                  .range([-180, 180]);
+
+  var rotate2 = d3.scale.linear()
+                  .domain([0, height])
+                  .range([90, -90]);
+
+  // should put world topo.json map on globe
+  d3.json('json/countries.topo.json', function(error, world) {
+    svg.append('path')
+       .datum(topojson.feature(world, world.objects.countries))
+       .attr('class', 'countries')
+       .attr('d', path);
+  });
+
+  // without lines don't appear
+  var svg = d3.select("body").append("svg")
+              .attr("width", width)
+              .attr("height", height);
+
+  // without this fill and stroke won't appear
+  svg.append("defs").append("path")
+     .datum({type: "Sphere"})
+     .attr("id", "sphere")
+     .attr("d", path);
+
+  // stroke around
+  svg.append("use")
+     .attr("class", "stroke")
+     .attr("xlink:href", "#sphere");
+
+  // background fill
+  svg.append("use")
+     .attr("class", "fill")
+     .attr("xlink:href", "#sphere");
+
+  // lat and long lines. order is for layering.
+  svg.append("path")
+     .datum(graticule)
+     .attr("class", "graticule")
+     .attr("d", path);
+
+   svg.on("mousemove", function() {
+    var p = d3.mouse(this);
+    projection.rotate([rotate1(p[0]), rotate2(p[1])]);
+    svg.selectAll("path").attr("d", path);
+  })
+
+
+  // d3.json("/d/4090846/world-110m.json", function(error, world) {
+  //   svg.append("path")
+  //      .datum(topojson.feature(world, world.objects.land))
+  //      .attr("class", "land")
+  //      .attr("d", path);
+  // });
+};
+
+var stateMap = function(){
+  var width = 900,
+  height = 500;
+
+  var projection = d3.geo.satellite()
+                     .distance(1.1)
+                     .scale(5500)
+                     .rotate([76.00, -34.50, 32.12])
+                     .center([-2, 5])
+                     .tilt(25)
+                     .clipAngle(Math.acos(1 / 1.1) * 180 / Math.PI - 1e-6)
+                     .precision(.1);
+
+  var graticule = d3.geo.graticule()
+                    .extent([[-93, 27], [-47 + 1e-6, 57 + 1e-6]])
+                    .step([3, 3]);
+
+  var path = d3.geo.path()
+               .projection(projection);
+
+  var svg = d3.select("body").append("svg")
+              .attr("width", width)
+              .attr("height", height);
+
+  svg.append("path")
+     .datum(graticule)
+     .attr("class","graticule")
+     .attr("d", path);
+
+  d3.json("json/states_us.topo.json", function(error, us) {
+    svg.append("path")
+       .datum(topojson.feature(us, us.objects.states))
+       .attr("class", "boundary")
+       .attr("d", path);
+  });
+
+  d3.select(self.frameElement).style("height", height + "px");
+};
