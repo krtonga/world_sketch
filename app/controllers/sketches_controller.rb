@@ -2,6 +2,7 @@ class SketchesController < ApplicationController
 
   def index
     @sketches = Sketch.all
+    @ip = request.remote_ip
     render json: @sketches.to_json
   end
 

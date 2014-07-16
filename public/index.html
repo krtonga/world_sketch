@@ -61,8 +61,10 @@
     <form class="sketch-details">
       <fieldset>
         <legend>Tell a future self about this sketch:</legend>
+        <div class="geolocation"></div>
         <p>Who are you? <input type="text" class="name"> / </p>
-        <p>Where are you? <input type="text" class="location"> /</p>
+
+        <p>Where are you? <input type="text" class="location" value="<%= @ip %>"> /</p>
         <p></p>
           Tags:
           <input type="text" autocomplete:"on" spellcheck="true" class="tags"> /<br>
@@ -70,8 +72,10 @@
         <label for="story">Story:</label><br>
         <textarea class="story"></textarea>
         <button type="submit" class="save">SAVE</button>
+
       </fieldset>
     </form>
+
   </div>
 
   <div class="where-it-should-go">

@@ -57,3 +57,10 @@ svg {
   stroke: black;
   stroke-width: 1px;
 }
+
+.geolocation {
+  height: 200px;
+  width: 30%;
+  background-color: antiquewhite;
+  float: right;
+}
