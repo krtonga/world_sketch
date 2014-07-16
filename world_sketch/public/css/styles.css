@@ -45,3 +45,9 @@ svg {
   width: 350px;
   height: 350px;
 }
+
+.where-it-should-go {
+  height: 100px;
+  width: 90%;
+  background-color: yellow;
+}

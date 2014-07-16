@@ -10,7 +10,7 @@
   <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <script src="js/libraries/underscore-min.js"></script>
   <script src="js/libraries/backbone-min.js"></script>
-  <script src="js/libraries/saveSvgAsPng.js"></script>
+  <script src="http://d3js.org/topojson.v1.min.js"></script>
 
 
   <!-- TEMPLATES :sketch, :sketchEdit -->
@@ -31,6 +31,7 @@
 
   <!-- APP + BACKBONE.models/collections/views -->
   <script src="js/drawD3.js"></script>
+  <script src="js/map_topoJSON.js"></script>
   <script src="js/backbone/app.js"></script>
   <script src="js/backbone/models/sketch.js"></script>
   <script src="js/backbone/collections/sketchCollection.js"></script>
@@ -73,9 +74,21 @@
     </form>
   </div>
 
-  <h1>Saved Sketches</h1>
+  <div class="where-it-should-go">
+    <canvas id="map"></canvas>
+  </div>
 
+  <h1>Saved Sketches</h1>
   <div class="saved-sketches"></div>
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
