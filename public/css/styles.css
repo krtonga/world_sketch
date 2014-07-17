@@ -82,9 +82,9 @@ fieldset, input, textarea {
 }
 
 .saved-sketch {
-  width: 22%;
+  width: 30%;
   zoom: .25;
-  height: 1250px;
+  height: 1350px;
   background-color: #F8FAFF;
   padding: 15px;
   margin: 20px;
