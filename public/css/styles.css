@@ -91,6 +91,12 @@ fieldset, input, textarea {
   margin-top: 40px;
 }
 
+@media screen and (max-width:480px) {
+  .saved-sketch {
+    width: 90%;
+  }
+}
+
 .the-sketch svg {
   width: 100%;
   height: 100%;
