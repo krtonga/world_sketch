@@ -42,7 +42,8 @@
 <!-- **************BODY******************** -->
 <body onload="blankCanvas()">
 
-  <h1>Sketcher</h1>
+<!-- <div class="desert"></div> -->
+    <h1>Sketcher</h1>
   <p>
     Draw something freehand.<br>
     Or, use a turtorial. <br>
@@ -51,6 +52,8 @@
     Find your past sketches, or find the sketches of a friend. <br>
     Sketch when you travel, and send back home something unique, instantaneously. <br>
   </p>
+
+
 
   <div class="studio">
     <div class="palette"></div>
@@ -78,27 +81,21 @@
 
   </div>
 
-  <div class="where-it-should-go">
-    <canvas id="map"></canvas>
-  </div>
-
-  <script>
-    var svg = d3.select('body').append('svg')
-                .attr('width', width)
-                .attr('height', height);
-    var projection = d3.geo.
-  </script>
 
 
   <h1>Saved Sketches</h1>
   <div class="saved-sketches"></div>
 
 
-<!-- ********************* SPINNING GLOBE -->
 
-  <div class="globe-container"></div>
-  <div class="states-container"></div>
+  <div class="where-it-should-go">
+    <canvas id="map"></canvas>
+  </div>
 
+  <!-- ********************* SPINNING GLOBE -->
+  <div class="space">
+    <div class="globe-container"></div>
+  </div>
 
 
 

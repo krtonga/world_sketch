@@ -162,7 +162,7 @@ var littleMap = function(){
   });
 
   // without lines don't appear
-  var svg = d3.select("body").append("svg")
+  var svg = d3.select(".globe-container").append("svg")
               .attr("width", width)
               .attr("height", height);
 

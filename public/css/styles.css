@@ -25,32 +25,33 @@ fieldset, input, textarea {
 }
 
 .saved-sketch, .the-sketch {
-  width: 25%;
+
   border: 3px solid black;
   border-radius: 20px;
   float: left;
   margin: 5px;
 }
 
-svg {
+.the-sketch svg {
   width: 100%;
+  height: 100%;
 }
 
 .saved-sketch {
-  width: 600px;
+  width: 25%;
   zoom: .25;
 }
 
 .the-sketch {
-  width: 350px;
-  height: 350px;
+  width: 100%;
+  height: 300px;
 }
 
-.where-it-should-go {
+/*.where-it-should-go {
   height: 100px;
   width: 90%;
   background-color: yellow;
-}
+}*/
 
 .countries {
   fill: green;
@@ -64,3 +65,11 @@ svg {
   background-color: antiquewhite;
   float: right;
 }
+
+/*.space {
+  background-image: url("http://d2.static.dvidshub.net/media/thumbs/photos/1210/692947/463x486_q75.jpg");
+}
+
+.desert {
+  background-image: url("http://www.nasa.gov/sites/default/files/styles/946xvariable_height/public/thumbnails/image/10359100_548449558611123_2372107906206127531_o.jpg?itok=V1drdIgV");
+}*/
