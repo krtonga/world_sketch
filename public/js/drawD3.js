@@ -75,6 +75,19 @@ function blankCanvas() {
     square.on("mousedown", function() { changeColor(this) })
   };
 
+  // function displayEraser(x, y, radius) {
+  //   var circl = palette.append("rect")
+  //                      .attr("x", x)
+  //                      .attr("y", y)
+  //                      .attr("width", radius)
+  //                      .attr("height", radius)
+  //                      .attr("thisColor", white)
+  //                      .style("fill", white);
+  //                      .attr("stroke", black);
+  //                      .attr("stroke-width", 1)
+  //   square.on("mousedown", function() { changeColor(this) })
+  // };
+
   function displayBrushSizes(x, y, radius){
     sqColor = "lightgray"
     var square = palette.append("circle")
@@ -85,6 +98,8 @@ function blankCanvas() {
                        .style("fill", sqColor);
     square.on("mousedown", function() { changeWidth(this) });
   };
+
+
 
   var scaleAll = 1;
   var y = 75 * scaleAll;
@@ -98,6 +113,9 @@ function blankCanvas() {
   var radius = 23*scaleAll;
   var y = 25 * scaleAll;
   var x = 5 * scaleAll;
+
+
+  displayColorPalette(scaleAll*0+x, y, radius, 'yellow');
   displayColorPalette(scaleAll*0+x, y, radius, 'yellow');
   displayColorPalette(scaleAll*25+x, y, radius, 'lime');
   displayColorPalette(scaleAll*50+x, y, radius, 'darkgreen');
@@ -111,7 +129,7 @@ function blankCanvas() {
   displayColorPalette(scaleAll*250+x, y, radius, 'maroon');
   displayColorPalette(scaleAll*275+x, y, radius, 'black');
   displayColorPalette(scaleAll*300+x, y, radius, 'lightgrey');
-
+  // displayEraser(scaleAll *325+x, y, radius);
 
 
 
