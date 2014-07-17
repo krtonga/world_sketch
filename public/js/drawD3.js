@@ -108,12 +108,9 @@ function blankCanvas() {
   displayBrushSizes(scaleAll*18+x, y+7*scaleAll, 10*scaleAll);
   displayBrushSizes(scaleAll*50+x, y+7*scaleAll, 20*scaleAll);
 
-
-
   var radius = 23*scaleAll;
   var y = 25 * scaleAll;
   var x = 5 * scaleAll;
-
 
   displayColorPalette(scaleAll*0+x, y, radius, 'yellow');
   displayColorPalette(scaleAll*0+x, y, radius, 'yellow');

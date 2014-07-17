@@ -43,14 +43,49 @@
 <body onload="blankCanvas()">
 
 <!-- <div class="desert"></div> -->
-    <h1>Sketcher</h1>
+    <div class="the-head">
+      <h1>Sketcher</h1>
+    </div>
   <p>
-    Draw something freehand.<br>
-    Or, use a turtorial. <br>
-    Then save it. <br>
-    With it's story, and location. <br>
-    Find your past sketches, or find the sketches of a friend. <br>
-    Sketch when you travel, and send back home something unique, instantaneously. <br>
+    <ul class="the-turtorial">
+      <li class="thats-the-intro" style="background:#CCD8E1">
+         Draw something freehand.<br>
+         <img src="http://www.hadewallpapers.com/wp-content/uploads/2014/04/windows-7-icon-size-4.jpg" alt="" class="icon">
+      </li>
+      <li class="thats-the-intro" style="background:#A9B7C2">
+        Or appreciate transience. There is no undo. Just refresh the page. <br>
+        <img src="http://www.endlessicons.com/wp-content/uploads/2012/11/refresh-icon.png" alt="" class="icon">
+      </li>
+      <li class="thats-the-intro" style="background:#90ABBF">
+        Then save it. <br>
+        <img src="http://wcdn3.dataknet.com/static/resources/icons/set20/f02a629827a6-2.png" alt="" class="icon">
+      </li>
+      <li class="thats-the-intro" style="background:#CCD8E1">
+        With it's story, and location.
+      DON'T FORGET LOCATION! <br>
+      <img src="http://wcdn2.dataknet.com/static/resources/icons/set28/a50b8178.png" alt="" class="icon">
+      </li>
+      <li class="thats-the-intro" style="background:#FFF0D3">
+        Find your past sketches, or find the sketches of a friend. <br>
+        <img src="http://openclipart.org/image/2400px/svg_to_png/177854/1367934593.png" alt="" class="icon left">
+        <img src="http://cdn.flaticon.com/png/256/33350.png" alt="" class="icon left">
+        <img src="http://cdn.flaticon.com/png/256/33350.png" alt="" class="icon left">
+        <img src="http://openclipart.org/image/2400px/svg_to_png/177854/1367934593.png" alt="" class="icon left">
+      </li>
+      <li class="thats-the-intro" style="background:#FFD9BC">
+        If you sketch when you travel, You send back home something unique, and'll be there instantaneously - space travel. <br>
+        <img src="http://troychafin.com/wp-content/uploads/2010/01/iconworks_spaceship-515x247.png" alt="" class="icon">
+      </li>
+      <li class="thats-the-intro" style="background-color: "#CCD8E1">
+        That's fun right? </br>
+        | <br>
+        | <br>
+        | <br>
+        | <br>
+        | <br>
+        V <br>
+      </li>
+    </ul>
   </p>
 
 
@@ -59,14 +94,13 @@
     <div class="palette"></div>
     <div class="etch-a-sketch"></div>
   </div>
-  <div class="more-info">
 
+  <div class="more-info">
     <form class="sketch-details">
       <fieldset>
-        <legend>Tell a future self about this sketch:</legend>
+        <legend>You should tell a future self about this Sketch:</legend>
         <div class="geolocation"></div>
         <p>Who are you? <input type="text" class="name"> / </p>
-
         <p>Where are you? <input type="text" class="location" value=""> /</p>
         <p></p>
           Tags:
@@ -75,15 +109,18 @@
         <label for="story">Story:</label><br>
         <textarea class="story"></textarea>
         <button type="submit" class="save">SAVE</button>
-
       </fieldset>
     </form>
-
   </div>
 
+  <div class="title-saved">
+    <h1>Saved Sketches</h1>
+    <p>
+      <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/List_icon.svg/429px-List_icon.svg.png" alt="" class="icon left"> <- Pick ->
+      <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Map_pin_icon.svg/352px-Map_pin_icon.svg.png" alt="" class="icon left">
+    </p>
+  </div>
 
-
-  <h1>Saved Sketches</h1>
   <div class="saved-sketches"></div>
 
   <div class="where-it-should-go">

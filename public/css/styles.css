@@ -1,7 +1,32 @@
+body {
+  text-align: center;
+}
+
+li {
+  padding-top: 100px;
+}
+
+
+.thats-the-intro {
+  height: 150px;
+  margin-left: -50px;
+  margin-right: -15px;
+  background-color:; /*set as sample of four appropriate colors*/
+
+}
+
+.icon {
+  height: 50px;
+}
+
 .palette {
   border: 1px solid lightgrey;
   height: 125px;
   width: 90%;
+  margin: 0 auto;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  background-color: #FFF8E9;
 }
 
 .etch-a-sketch {
@@ -9,10 +34,14 @@
   height: 300px;
   width: 90%;
   border-radius: 5px;
+  margin: 0 auto;
 }
 
 fieldset {
   width: 86%;
+  margin: 0 auto;
+  margin-top: 30px;
+  text-align: left;
 }
 
 fieldset, input, textarea {
@@ -20,43 +49,8 @@ fieldset, input, textarea {
 }
 
 .story {
-  width: 80%;
+  width: 60%;
   height: 100px;
-}
-
-.saved-sketch, .the-sketch {
-
-  border: 3px solid black;
-  border-radius: 20px;
-  float: left;
-  margin: 5px;
-}
-
-.the-sketch svg {
-  width: 100%;
-  height: 100%;
-}
-
-.saved-sketch {
-  width: 25%;
-  zoom: .25;
-}
-
-.the-sketch {
-  width: 100%;
-  height: 300px;
-}
-
-/*.where-it-should-go {
-  height: 100px;
-  width: 90%;
-  background-color: yellow;
-}*/
-
-.countries {
-  fill: green;
-  stroke: black;
-  stroke-width: 1px;
 }
 
 .geolocation {
@@ -64,12 +58,71 @@ fieldset, input, textarea {
   width: 30%;
   background-color: antiquewhite;
   float: right;
+  text-align: center;
 }
 
-/*.space {
+.title-saved {
+  background-color: #90ABBF;
+  height: 200px;
+  padding-top: 50px;
+  margin: 0px;
+  margin-top: 30px;
+}
+
+.saved-sketches {
+  background-color: #0E4168;
+}
+
+.saved-sketch, .the-sketch {
+  border: 3px solid black;
+  border-radius: 20px;
+  float: left;
+  margin: 0px;
+  width: 110%;
+}
+
+.saved-sketch {
+  width: 22%;
+  zoom: .25;
+  height: 1250px;
+  background-color: #F8FAFF;
+  padding: 15px;
+  margin: 20px;
+  margin-top: 40px;
+}
+
+.the-sketch svg {
+  width: 100%;
+  height: 100%;
+}
+
+.the-sketch {
+  width: 95%;
+  height: 300px;
+  background-color: white;
+}
+
+.where-it-should-go {
+  height: 100px;
+  width: 100%;
+  background-color: #0E4168;
+}
+
+.countries {
+  fill: green;
+  stroke: black;
+  stroke-width: 1px;
+}
+
+.space, .where-it-should-go {
   background-image: url("http://d2.static.dvidshub.net/media/thumbs/photos/1210/692947/463x486_q75.jpg");
 }
 
-.desert {
+/*.desert {
   background-image: url("http://www.nasa.gov/sites/default/files/styles/946xvariable_height/public/thumbnails/image/10359100_548449558611123_2372107906206127531_o.jpg?itok=V1drdIgV");
 }*/
+
+.the-head {
+  height: 100px;
+  background-color: white;
+}
